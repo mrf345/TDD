@@ -168,7 +168,7 @@ Inspection, Performance, Reporting !"
 
 - Source code and presentation can be found on:<br /><br />
 <center>
-<a href="https://github.com/mrf34/TDD">github.com/mrf34/TDD</a>
+<a href="https://github.com/mrf345/TDD">github.com/mrf345/TDD</a>
 <br />
 <img src="qrcode.gif"/>
 </center>
