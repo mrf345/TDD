@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class=" js no-mobile desktop no-ie ff ff56 tmp-section w-1920 gt-240 gt-320 gt-480 gt-640 gt-768 gt-800 gt-1024 gt-1280 gt-1440 gt-1680 no-portrait landscape gradient rgba opacity textshadow multiplebgs boxshadow borderimage borderradius no-cssreflections csstransforms csstransitions no-touch no-retina fontface domloaded" id="mume11869-26548-1kfl7jy-page"><head>
+<html class=" js no-mobile desktop no-ie ff ff56 tmp-section w-1920 gt-240 gt-320 gt-480 gt-640 gt-768 gt-800 gt-1024 gt-1280 gt-1440 gt-1680 no-portrait landscape gradient rgba opacity textshadow multiplebgs boxshadow borderimage borderradius no-cssreflections csstransforms csstransitions no-touch no-retina fontface domloaded" id="mume118616-3306-1ta1hg-page"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
       <title>Presentation</title>
       <meta charset="utf-8">
@@ -1850,6 +1850,13 @@ body {
     box-shadow: inset 0 0 20px black;
 }
 img {
+    cursor: zoom-in;
+    height: 400px;
+}
+img:hover {
+    height: 650px;
+}
+img.qr {
     height: 300px;
     width: 400px;
 }
@@ -1859,6 +1866,13 @@ a {
 }
 li {
     list-style-type: square;
+}
+code {
+    color: green;
+}
+pre:hover {
+    cursor: zoom-in;
+    font-size: 70%;
 }
 
 @keyframes beat {
@@ -1915,38 +1929,86 @@ li {
 </div>
     <div class="reveal slide center ready" role="application" data-transition-speed="default" data-background-transition="fade">
       <div class="slides" style="width: 960px; height: 700px; left: 50%; top: 50%; bottom: auto; right: auto; transform: translate(-50%, -50%) scale(1.16229);">
-        <section id="1" lineno="85" class="slide present" data-line="85" data-h="0" data-v="0" style="top: 4.5px; display: block;">
+        <section id="1" lineno="99" class="slide present" data-line="99" data-h="0" data-v="0" style="top: 32px; display: block;">
 <h1 class="mume-header" id="test-driven-development-br-br">Test driven Development <br> <br></h1>
 
 <ul>
-<li>What's it ? <i>First comes testing</i> <br><br></li>
-<li>Why TDD ? <i>Untested software is broken</i> <br><br></li>
-<li>Really why ?! <i>Cross platform support example</i></li>
+<li class="fragment" data-fragment-index="0">What's it ? <em>First comes testing</em> <br><br> <!-- .element: class="fragment" data-fragment-index="1" --></li>
+<li class="fragment" data-fragment-index="1">Why TDD ? <em>Untested code is broken code</em> <br><br> <!-- .element: class="fragment" data-fragment-index="2" --></li>
 </ul>
-</section><section id="2" lineno="93" class="slide future" data-line="93" data-h="1" data-v="0" style="top: 14px; display: block;" aria-hidden="true" hidden="">
+</section><section id="2" lineno="105" class="slide future" data-line="105" data-h="1" data-v="0" style="top: 15.5px; display: block;" aria-hidden="true" hidden="">
+<h1 class="mume-header" id="tddimagestddjpg-tdd-life-cycle-model"><img src="Presentation_files/tdd.jpg" alt="tdd" title="TDD life-cycle model"></h1>
+
+<ol>
+<li class="fragment" data-fragment-index="0">Red: Writing and failing tests <!-- .element: class="fragment" data-fragment-index="1" --></li>
+<li class="fragment" data-fragment-index="1">Green: Writing code and passing tests <!-- .element: class="fragment" data-fragment-index="2" --></li>
+<li class="fragment" data-fragment-index="2">Refactor: Improving code and tests <!-- .element: class="fragment" data-fragment-index="3" --></li>
+</ol>
+</section><section id="2" lineno="111" class="slide future" data-line="111" data-h="2" data-v="0" style="top: 0px; display: block;" aria-hidden="true" hidden="">
 <h1 class="mume-header" id="unit-testing-frameworks-br-br">unit testing frameworks <br> <br></h1>
 
 <ul>
-<li>What's UnitTesting ? Units and Cases</li>
+<li class="fragment" data-fragment-index="0">What's UnitTesting ? Units and Cases <!-- .element: class="fragment" data-fragment-index="1" --><br>
+<code>Class [ Method_1, Method2, ... ] =&gt; Case [ Unit_1, Unit_2, ... ]</code> <br> <br> <!-- .element: class="fragment" data-fragment-index="2" --></li>
+<li class="fragment" data-fragment-index="1">Why a framework ? <i>Not to reinvent the wheel</i> <!-- .element: class="fragment" data-fragment-index="3" --></li>
 </ul>
+</section><section id="3" lineno="117" class="slide future" data-line="117" data-h="3" data-v="0" style="top: 350px; display: none;" aria-hidden="true" hidden="">
+<p class="typeWriter typeIt1">
+"Sounds like a headache to me,
+</p><p class="typeWriter typeIt2">
+Why the hell would you need all
+</p>
+<p class="typeWriter typeIt3">
+that useless testing ?!"
+</p><br>
+<p></p></section><section lineno="127" class="slide future" data-line="127" data-h="4" data-v="0" style="top: 350px; display: none;" aria-hidden="true" hidden="">
 <blockquote>
-<p>Classes:Cases [ Methods:Units ]</p>
+<p>How about a full-stack, web-based cross-platform cross-browser support desktop application ?</p>
 </blockquote>
 <ul>
-<li>Why a framework ? <i>Not to reinvent the wheel</i></li>
+<li class="fragment" data-fragment-index="0">What's FQM ? <br> <!-- .element: class="fragment" data-fragment-index="1" --></li>
+<li class="fragment" data-fragment-index="1">What can go wrong ? <!-- .element: class="fragment" data-fragment-index="2" --><br>
+<code>6000 &gt; JS lines in * OS &amp;&amp; browsers</code><br>
+<code>5000 &gt; CSS &amp;&amp; LESS * OS &amp;&amp; browsers</code><br>
+<code>4500 &gt; Python lines CRUD with SQLite</code><br>
+<code>QT GUI QThreading support in * OS</code><br>
+<code>Async Gevent webserver in * OS</code><br>
+<code>POS printers support in * OS</code></li>
 </ul>
-</section><section id="3" lineno="99" class="slide future" data-line="99" data-h="2" data-v="0" style="top: 113px; display: block;" aria-hidden="true" hidden="">
+</section><section lineno="138" class="slide future" data-line="138" data-h="5" data-v="0" style="top: 350px; display: none;" aria-hidden="true" hidden="">
+<h1 class="mume-header" id="olcimagesolcpng-fqm-old-life-cycle"><img src="Presentation_files/olc.png" alt="olc" title="FQM old life-cycle"></h1>
+
+<ul>
+<li class="fragment" data-fragment-index="0">Average of 3 critical errors per release <!-- .element: class="fragment" data-fragment-index="1" --></li>
+<li class="fragment" data-fragment-index="1">4 major release, 12 minor release <!-- .element: class="fragment" data-fragment-index="2" --></li>
+<li class="fragment" data-fragment-index="2">Whole life cycle repeated 16 times ! <!-- .element: class="fragment" data-fragment-index="3" --></li>
+<li class="fragment" data-fragment-index="3">Testing and Building repeated 96 times ! <!-- .element: class="fragment" data-fragment-index="4" --></li>
+</ul>
+</section><section lineno="145" class="slide future" data-line="145" data-h="6" data-v="0" style="top: 350px; display: none;" aria-hidden="true" hidden="">
+<h1 class="mume-header" id="olcimagesolc_afterpng-fqm-old-life-cycle"><img src="Presentation_files/olc_after.png" alt="olc" title="FQM old life-cycle"></h1>
+
+<ul>
+<li class="fragment" data-fragment-index="0">%30 &gt; of code became standalone "units" or extensions separately maintained tested <!-- .element: class="fragment" data-fragment-index="1" --></li>
+<li class="fragment" data-fragment-index="1">%130 less time spent with new release cycle <!-- .element: class="fragment" data-fragment-index="2" --></li>
+<li class="fragment" data-fragment-index="2">0 minor releases and 0 repeats ! <!-- .element: class="fragment" data-fragment-index="3" --></li>
+</ul>
+</section><section lineno="151" class="slide future" data-line="151" data-h="7" data-v="0" style="top: 350px; display: none;" aria-hidden="true" hidden="">
+<blockquote>
+<p>Speed and time threshold for TDD</p>
+</blockquote>
+<h1 class="mume-header" id="olcimagesspeedpng-fqm-old-life-cycle"><img src="Presentation_files/speed.png" alt="olc" title="FQM old life-cycle"></h1>
+
+</section><section id="5" lineno="155" class="slide future" data-line="155" data-h="8" data-v="0" style="top: 350px; display: none;" aria-hidden="true" hidden="">
+<h1 class="theEnd">Let's be practical</h1>
+</section><section lineno="158" class="slide future" data-line="158" data-h="9" data-v="0" style="top: 350px; display: none;" aria-hidden="true" hidden="">
 <h1 class="mume-header" id="pythonic-example">pythonic example:</h1>
 
-<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword">def</span> <span class="token function">print_something</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token triple-quoted-string string">""" To print and return the input """</span>
-    <span class="token keyword">if</span> <span class="token operator">not</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">raise</span><span class="token punctuation">(</span>
-            TypeError<span class="token punctuation">(</span>
-                <span class="token string">"print_something(input=) must be string"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<pre data-role="codeBlock" data-info="python" class="language-python">@function_parameters
+<span class="token keyword">def</span> <span class="token function">print_something</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""To print and return the input ((input:str))"""</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">)</span>
     <span class="token keyword">return</span> <span class="token builtin">input</span>
-</pre></section><section id="4" lineno="112" class="slide future" data-line="112" data-h="3" data-v="0" style="top: 350px; display: none;" aria-hidden="true" hidden="">
+</pre></section><section id="4" lineno="168" class="slide future" data-line="168" data-h="10" data-v="0" style="top: 350px; display: none;" aria-hidden="true" hidden="">
 <h1 class="mume-header" id="pythonic-example-1">pythonic example:</h1>
 
 <pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword">from</span>  simple_functions <span class="token keyword">import</span> print_something
@@ -1961,9 +2023,7 @@ li {
         self<span class="token punctuation">.</span>assertEqual<span class="token punctuation">(</span>self<span class="token punctuation">.</span>testing_value<span class="token punctuation">,</span>
             print_something<span class="token punctuation">(</span><span class="token string">'Something to test'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 main<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</pre></section><section id="5" lineno="128" class="slide future" data-line="128" data-h="4" data-v="0" style="top: 350px; display: none;" aria-hidden="true" hidden="">
-<h1 class="theEnd">Let's be practical</h1>
-</section><section id="6" lineno="131" class="slide future" data-line="131" data-h="5" data-v="0" style="top: 350px; display: none;" aria-hidden="true" hidden="">
+</pre></section><section id="6" lineno="185" class="slide future" data-line="185" data-h="11" data-v="0" style="top: 350px; display: none;" aria-hidden="true" hidden="">
 <p class="typeWriter typeIt1">
 "Nice story bro, but that's just
 </p><p class="typeWriter typeIt2">
@@ -1972,7 +2032,7 @@ functional testing. How about ?
 <p class="typeWriter typeIt3">
 Inspection, Performance, Reporting !"
 </p>
-<p></p></section><section id="7" lineno="141" class="slide future" data-line="141" data-h="6" data-v="0" style="top: 350px; display: none;" aria-hidden="true" hidden="">
+<p></p></section><section id="7" lineno="195" class="slide future" data-line="195" data-h="12" data-v="0" style="top: 350px; display: none;" aria-hidden="true" hidden="">
 <h1 class="mume-header" id="inspection">Inspection ?</h1>
 
 <br>
@@ -1981,7 +2041,7 @@ Inspection, Performance, Reporting !"
 <code>coverage run --source='./simple_functions' test_simple_functions.py</code><br>
 <code>coverage report</code></li>
 </ul>
-</section><section id="8" lineno="149" class="slide future" data-line="149" data-h="7" data-v="0" style="top: 350px; display: none;" aria-hidden="true" hidden="">
+</section><section id="8" lineno="203" class="slide future" data-line="203" data-h="13" data-v="0" style="top: 350px; display: none;" aria-hidden="true" hidden="">
 <h1 class="mume-header" id="performance">Performance ?</h1>
 
 <br>
@@ -1990,7 +2050,7 @@ Inspection, Performance, Reporting !"
 <code>Uncomment simple_functions</code><br>
 <code>python test_simple_functions_more.py</code></li>
 </ul>
-</section><section id="9" lineno="157" class="slide future" data-line="157" data-h="8" data-v="0" style="top: 350px; display: none;" aria-hidden="true" hidden="">
+</section><section id="9" lineno="211" class="slide future" data-line="211" data-h="14" data-v="0" style="top: 350px; display: none;" aria-hidden="true" hidden="">
 <h1 class="mume-header" id="reporting">Reporting:</h1>
 
 <br>
@@ -1999,24 +2059,23 @@ Inspection, Performance, Reporting !"
 <code>coverage html</code><br>
 <code>copy link &amp;&amp; view on Open browser</code></li>
 </ul>
-</section><section id="10" lineno="165" class="slide future" data-line="165" data-h="9" data-v="0" style="top: 350px; display: none;" aria-hidden="true" hidden="">
+</section><section id="10" lineno="219" class="slide future" data-line="219" data-h="15" data-v="0" style="top: 350px; display: none;" aria-hidden="true" hidden="">
 <h1 class="theEnd">the end</h1> <br><br>
 <ul>
 <li>Source code and presentation can be found on:<br><br></li>
 </ul>
 <center>
-<a href="https://github.com/mrf34/TDD">github.com/mrf34/TDD</a>
+<a href="https://github.com/mrf345/TDD">github.com/mrf345/TDD</a>
 <br>
-<img src="Presentation_files/qrcode.gif">
+<img class="qr" src="Presentation_files/qrcode.gif">
 </center></section>
       </div>
-    <div class="backgrounds"><div class="slide-background slide present" style="display: block;" data-loaded="true"></div><div class="slide-background slide future" style="display: block;" data-loaded="true"></div><div class="slide-background slide future" style="display: block;" data-loaded="true"></div><div class="slide-background slide future" style="display: none;"></div><div class="slide-background slide future" style="display: none;"></div><div class="slide-background slide future" style="display: none;"></div><div class="slide-background slide future" style="display: none;"></div><div class="slide-background slide future" style="display: none;"></div><div class="slide-background slide future" style="display: none;"></div><div class="slide-background slide future" style="display: none;"></div></div><div class="progress" style="display: block;"><span style="width: 0px;"></span></div><aside class="controls" style="display: block;"><button class="navigate-left" aria-label="previous slide" disabled="disabled"></button><button class="navigate-right enabled" aria-label="next slide"></button><button class="navigate-up" aria-label="above slide" disabled="disabled"></button><button class="navigate-down" aria-label="below slide" disabled="disabled"></button></aside><div class="slide-number" style="display: none;"></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"></div><div style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);" id="aria-status-div" aria-live="polite" aria-atomic="true">
+    <div class="backgrounds"><div class="slide-background slide present" style="display: block;" data-loaded="true"></div><div class="slide-background slide future" style="display: block;" data-loaded="true"></div><div class="slide-background slide future" style="display: block;" data-loaded="true"></div><div class="slide-background slide future" style="display: none;"></div><div class="slide-background slide future" style="display: none;"></div><div class="slide-background slide future" style="display: none;"></div><div class="slide-background slide future" style="display: none;"></div><div class="slide-background slide future" style="display: none;"></div><div class="slide-background slide future" style="display: none;"></div><div class="slide-background slide future" style="display: none;"></div><div class="slide-background slide future" style="display: none;"></div><div class="slide-background slide future" style="display: none;"></div><div class="slide-background slide future" style="display: none;"></div><div class="slide-background slide future" style="display: none;"></div><div class="slide-background slide future" style="display: none;"></div><div class="slide-background slide future" style="display: none;"></div></div><div class="progress" style="display: block;"><span style="width: 0px;"></span></div><aside class="controls" style="display: block;"><button class="navigate-left" aria-label="previous slide" disabled="disabled"></button><button class="navigate-right enabled fragmented" aria-label="next slide"></button><button class="navigate-up" aria-label="above slide" disabled="disabled"></button><button class="navigate-down" aria-label="below slide" disabled="disabled"></button></aside><div class="slide-number" style="display: none;"></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"></div><div style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);" id="aria-status-div" aria-live="polite" aria-atomic="true">
 Test driven Development  
 
 
-What's it ? First comes testing 
-Why TDD ? Untested software is broken 
-Really why ?! Cross platform support example
+What's it ? First comes testing  
+Why TDD ? Untested code is broken code  
 
 </div></div>
     

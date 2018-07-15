@@ -20,6 +20,13 @@ body {
     box-shadow: inset 0 0 20px black;
 }
 img {
+    cursor: zoom-in;
+    height: 400px;
+}
+img:hover {
+    height: 650px;
+}
+img.qr {
     height: 300px;
     width: 400px;
 }
@@ -29,6 +36,13 @@ a {
 }
 li {
     list-style-type: square;
+}
+code {
+    color: green;
+}
+pre:hover {
+    cursor: zoom-in;
+    font-size: 70%;
 }
 
 @keyframes beat {
@@ -85,27 +99,69 @@ li {
 
 <!-- slide id="1" -->
 # Test driven Development <br /> <br />
-- What's it ? <i>First comes testing</i> <br /><br />
-- Why TDD ? <i>Untested software is broken</i> <br /><br />
-- Really why ?! <i>Cross platform support example</i>
-
+- What's it ? _First comes testing_ <br /><br /> <!-- .element: class="fragment" data-fragment-index="1" -->
+- Why TDD ? _Untested code is broken code_ <br /><br /> <!-- .element: class="fragment" data-fragment-index="2" -->
 
 
 <!-- slide id="2" -->
+# ![tdd](images/tdd.jpg "TDD life-cycle model")
+1. Red: Writing and failing tests <!-- .element: class="fragment" data-fragment-index="1" -->
+2. Green: Writing code and passing tests <!-- .element: class="fragment" data-fragment-index="2" -->
+3. Refactor: Improving code and tests <!-- .element: class="fragment" data-fragment-index="3" -->
+
+<!-- slide id="2" -->
 # unit testing frameworks <br /> <br />
-- What's UnitTesting ? Units and Cases
-> Classes:Cases [ Methods:Units ]
-- Why a framework ? <i>Not to reinvent the wheel</i>
+- What's UnitTesting ? Units and Cases <!-- .element: class="fragment" data-fragment-index="1" -->
+`Class [ Method_1, Method2, ... ] => Case [ Unit_1, Unit_2, ... ]` <br /> <br /> <!-- .element: class="fragment" data-fragment-index="2" -->
+- Why a framework ? <i>Not to reinvent the wheel</i> <!-- .element: class="fragment" data-fragment-index="3" -->
 
 <!-- slide id="3" -->
+<p class="typeWriter typeIt1">
+"Sounds like a headache to me,
+<p class="typeWriter typeIt2">
+Why the hell would you need all
+</p>
+<p class="typeWriter typeIt3">
+that useless testing ?!"
+</p><br />
+
+<!-- slide -->
+> How about a full-stack, web-based cross-platform cross-browser support desktop application ?
+- What's FQM ? <br /> <!-- .element: class="fragment" data-fragment-index="1" -->
+- What can go wrong ? <!-- .element: class="fragment" data-fragment-index="2" -->
+`6000 > JS lines in * OS && browsers`
+`5000 > CSS && LESS * OS && browsers`
+`4500 > Python lines CRUD with SQLite`
+`QT GUI QThreading support in * OS`
+`Async Gevent webserver in * OS`
+`POS printers support in * OS`
+
+<!-- slide -->
+# ![olc](images/olc.png "FQM old life-cycle")
+- Average of 3 critical errors per release <!-- .element: class="fragment" data-fragment-index="1" -->
+- 4 major release, 12 minor release <!-- .element: class="fragment" data-fragment-index="2" -->
+- Whole life cycle repeated 16 times ! <!-- .element: class="fragment" data-fragment-index="3" -->
+- Testing and Building repeated 96 times ! <!-- .element: class="fragment" data-fragment-index="4" -->
+
+<!-- slide -->
+# ![olc](images/olc_after.png "FQM old life-cycle")
+- %30 > of code became standalone "units" or extensions separately maintained tested <!-- .element: class="fragment" data-fragment-index="1" -->
+- %130 less time spent with new release cycle <!-- .element: class="fragment" data-fragment-index="2" -->
+- 0 minor releases and 0 repeats ! <!-- .element: class="fragment" data-fragment-index="3" -->
+
+<!-- slide -->
+> Speed and time threshold for TDD
+# ![olc](images/speed.png "FQM old life-cycle")
+
+<!-- slide id="5" -->
+<h1 class="theEnd">Let's be practical</h1>
+
+<!-- slide -->
 # pythonic example:
 ```python
+@function_parameters
 def print_something(input):
-    """ To print and return the input """
-    if not isinstance(input, str):
-        raise(
-            TypeError(
-                "print_something(input=) must be string"))
+    """To print and return the input ((input:str))"""
     print(input)
     return input
 ```
@@ -126,8 +182,6 @@ class Testing_Something(TestCase):
             print_something('Something to test'))
 main()
 ```
-<!-- slide id="5" -->
-<h1 class="theEnd">Let's be practical</h1>
 
 <!-- slide id="6" -->
 <p class="typeWriter typeIt1">
@@ -170,5 +224,5 @@ Inspection, Performance, Reporting !"
 <center>
 <a href="https://github.com/mrf345/TDD">github.com/mrf345/TDD</a>
 <br />
-<img src="qrcode.gif"/>
+<img class='qr' src="images/qrcode.gif"/>
 </center>

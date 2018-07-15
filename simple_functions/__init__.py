@@ -1,24 +1,16 @@
+from static_parameters import function_parameters
+
+@function_parameters
 def print_something(input):
-    """ To print and return the input """
-    if not isinstance(input, str):
-        raise(
-            TypeError(
-                "print_something(input=) must be string"))
+    """To print and return the input ((input:str))"""
     print(input)
     return input
 
-
-# def print_something_slowly(input, duration):
-    """ To sleep, print and return input """
-    from time import sleep
-    if not isinstance(input, str):
-        raise(
-            TypeError(
-                "print_something_slowly(input=) must be string"))
-    if not isinstance(duration, int):
-        raise(
-            TypeError(
-                "print_something_slowly(duration=) must be int"))
-    sleep(duration)
+# def print_something_heavily(input, times):
+    """ To print and return input. With memory overflow 
+        ((input:str)) ((times:int))
+    """
+    for _ in range(0, times):
+        locals()[str(_)] = hash(_)
     print(input)
     return input
